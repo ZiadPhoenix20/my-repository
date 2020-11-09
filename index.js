@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
+
+require("dotenv").config();
+
 app.get("/", (req, res) => {
   return res.json({
     restaurant: {
@@ -458,6 +461,6 @@ app.get("/", (req, res) => {
 //     console.log("Server started");
 //   });
 // }
-app.listen(process.env.PORT || 3200, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server started");
 });
